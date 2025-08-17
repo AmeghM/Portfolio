@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | AMEGH</title>
+    <link rel="shortcut icon" href="media/profile.png" type="image/x-icon" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+
+      .mask {
+        mask-image: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(0, 0, 0.9),
+          rgba(0, 0, 0.9),
+          transparent
+        );
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(0, 0, 0.9),
+          rgba(0, 0, 0.9),
+          transparent
+        );
+      }
+      @keyframes floatBreathe {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          transform: translateY(-12px) scale(1.1);
+        }
+      }
+      .animate-fb {
+        animation: floatBreathe 4s ease-in-out infinite;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bg-gray-900 h-screen overflow-x-clip antialised">
+      <header>
+        <nav
+          class="w-full fixed px-5 lg:px-8 py-4 flex items-center justify-between z-50"
+        >
+          <h1 class="ml-4 md:ml-14">
+            <a
+              href="#home"
+              class="mr-14 text-white font-poppins text-xl font-semibold tracking-wide"
+              >AMEGH</a
+            >
+          </h1>
+          <ul
+            class="hidden md:flex items-center gap-3 lg:gap-4 rounded-full px-11 py-3 border-2 text-sm text-gray-300 border-white/10 bg-white/5 backdrop-blur font-poppins"
+          >
+            <li>
+              <a
+                href="#home"
+                class="block rounded-full px-4 py-1.5 font-semibold transition hover:bg-white/10 hover:text-[#14b8a6]"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block rounded-full px-4 py-1.5 font-semibold transition hover:bg-white/10 hover:text-[#14b8a6]"
+                >About Me</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="block rounded-full px-4 py-1.5 font-semibold transition hover:bg-white/10 hover:text-[#14b8a6]"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#works"
+                class="rounded-full px-4 py-1.5 font-semibold transition hover:bg-white/10 hover:text-[#14b8a6]"
+                >My Work</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="rounded-full px-4 py-1.5 font-semibold transition hover:bg-white/10 hover:text-[#14b8a6]"
+                >Contact Me</a
+              >
+            </li>
+          </ul>
+          <a
+            href="#contact"
+            class="hidden md:flex items-center gap-3 px-8 py-2.5 border-2 border-[#14b8a6] rounded-full ml-6 text-white hover:bg-[#14b8a6] hover:text-gray-900 transition"
+            >Connect
+            <img src="media/arrow-icon.png" alt="arrow-icon" class="w-3"
+          /></a>
+          <button
+            class="md:hidden flex flex-col gap-1.5 ml-auto focus:outline-none group"
+          >
+            <span
+              class="w-6 h-0.5 bg-white rounded group-hover:bg-[#14b8a6]"
+            ></span>
+            <span
+              class="w-6 h-0.5 bg-white rounded group-hover:bg-[#14b8a6]"
+            ></span>
+            <span
+              class="w-6 h-0.5 bg-white rounded group-hover:bg-[#14b8a6]"
+            ></span>
+          </button>
+        </nav>
+      </header>
+      <!-- hero section -->
+      <!-- <section class="overflow-hidden" id="home">
+        <div class="lg:max-w-7xl">
+          <div
+            class="relative flex h-screen flex-col-reverse items-center md:flex-row"
+          >
+
+            <div class="text-left md:max-w-72 lg:max-w-lg font-inter md:ml-30">
+              <p class="text-xl font-medium text-[#14b8a6]">Amegh M</p>
+              <h2
+                class="mt-4 font-inter text-3xl font-bold tracking-widest text-white/80 md:text-4xl lg:mt-8 ls:text-5xl"
+              >
+                Aspiring Web Developer
+              </h2>
+              <p class="mt-4 text-white/40 md:text-lg">
+                I build modern, scalable, and user-friendly web applications.
+                Passionate about creating digital solutions that make an impact.
+              </p>
+              <div class="flex items-center gap-5 mt-5">
+                <a
+                  href="media/my-resume.pdf"
+                  class="px-4 py-2 bg-[#14b8a6] text-white font-semibold rounded-xl shadow hover:bg-[#0d9488] transition"
+                  download
+                >
+                  My Resume
+                </a>
+                <a
+                  href="media/my-resume.pdf"
+                  class="px-4 py-2 text-white font-semibold rounded-xl shadow border border-[#0d9488] hover:bg-[#14b8a6] transition"
+                >
+                  Contact Me
+                </a>
+              </div>
+            </div>
+
+
+            <div
+              class="mask absolute lg:left-220 right-0 top-0 h-[550px] w-full overflow-hidden rounded-bl-full rounded-br-full border-r-[10px] border-[#14b8a6] bg-gray-700 md:h-[600px] md:w-[450px]"
+            >
+
+              <i
+                class="fa-brands fa-html5 text-orange-500 text-3xl md:text-5xl absolute top-5 left-5 md:top-25 md:left-10 z-10 animate-fb"
+              ></i>
+
+              <i
+                class="fa-brands fa-css3-alt text-blue-500 text-3xl md:text-5xl absolute top-12 right-5 md:top-28 md:right-10 z-10 animate-fb"
+              ></i>
+
+              <i
+                class="fa-brands fa-js text-yellow-400 text-3xl md:text-5xl absolute bottom-28 left-5 md:bottom-40 md:left-10 z-10 animate-fb"
+              ></i>
+              <i
+                class="fa-brands fa-react text-sky-500 text-3xl md:text-5xl absolute bottom-16 right-5 md:bottom-50 md:right-10 z-10 animate-fb"
+              ></i>
+
+              <img
+                src="media/passport size pic.png"
+                alt="My pic"
+                class="absolute bottom-[-30px] left-0 w-[450px] z-0"
+              />
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- hero section -->
+      <section id="home" class="overflow-hidden bg-gray-900 py-4">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div
+            class="flex flex-col-reverse items-center justify-between md:flex-row min-h-screen"
+          >
+            <!-- hero content -->
+            <div class="text-center md:text-left md:w-1/2 font-inter">
+              <p class="text-xl font-medium text-[#14b8a6]">Amegh M</p>
+              <h2
+                class="mt-4 text-3xl font-bold tracking-widest text-white/90 md:text-4xl lg:text-5xl"
+              >
+                Aspiring Web Developer
+              </h2>
+              <p class="mt-4 text-white/50 md:text-lg">
+                Crafting responsive, efficient, and user-friendly web
+                experiences with a focus on clean design and meaningful impact.
+              </p>
+              <div
+                class="flex flex-wrap justify-center md:justify-start gap-4 mt-6"
+              >
+                <a
+                  href="media/Amegh M.pdf"
+                  class="px-5 py-2 bg-[#14b8a6] text-white font-semibold rounded-xl shadow hover:bg-[#0d9488] transition font-inter"
+                  download
+                >
+                  My Resume
+                </a>
+                <a
+                  href="#contact"
+                  class="px-5 py-2 text-white font-semibold font-inter rounded-xl shadow border border-[#14b8a6] hover:bg-[#14b8a6] hover:text-white transition"
+                >
+                  Contact Me
+                </a>
+              </div>
+            </div>
+
+            <!-- hero image -->
+            <div
+              class="relative w-full md:w-1/2 flex justify-center items-center mt-10 md:mt-0"
+            >
+              <!-- floating tech icons -->
+              <i
+                class="fa-brands fa-html5 text-orange-500 text-3xl md:text-5xl absolute top-20 left-25 -rotate-35 animate-fb"
+              ></i>
+              <i
+                class="fa-brands fa-css3-alt text-blue-500 text-3xl md:text-5xl absolute top-20 right-25 rotate-35 animate-fb"
+              ></i>
+              <i
+                class="fa-brands fa-github text-white text-3xl md:text-4xl absolute top-5 right-12 rotate-10 animate-fb"
+              ></i>
+              <i
+                class="fa-brands fa-js text-yellow-400 text-3xl md:text-5xl absolute bottom-10 left-25 rotate-220 animate-fb"
+              ></i>
+              <i
+                class="fa-brands fa-node-js text-green-500 text-3xl md:text-5xl absolute bottom-50 left-18 -rotate-12 animate-fb"
+              ></i>
+              <i
+                class="fa-brands fa-bootstrap text-purple-500 text-3xl md:text-5xl absolute bottom-35 right-25 rotate-40 animate-fb"
+              ></i>
+
+              <i
+                class="fa-brands fa-react text-sky-500 text-3xl md:text-5xl absolute bottom-10 right-25 -rotate-220 animate-fb"
+              ></i>
+
+              <!-- main hero image -->
+              <img
+                src="media/main-img.png"
+                alt="My pic"
+                class="w-72 sm:w-96 lg:w-[500px] relative z-10"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about section -->
+      <section
+        class="group bg-gray-800 text-white py-14 px-6 md:px-16"
+        id="about"
+      >
+        <div
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+        >
+          <div class="relative flex justify-center">
+            <img
+              src="media/main-img.png"
+              alt="Profile"
+              class="rounded-2xl shadow-lg object-cover w-72 h-72 md:w-96 md:h-96"
+            />
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-transparent via-transparent to-[#14b8a6] opacity-20 rounded-2xl"
+            ></div>
+          </div>
+
+          <!-- About Content -->
+          <div>
+            <h3
+              class="text-[#14b8a6] text-sm font-semibold uppercase tracking-wider mb-2 group-hover:animate-pulse"
+            >
+              Who Am I?
+            </h3>
+            <h1 class="text-3xl md:text-4xl font-bold leading-snug mb-4">
+              I'm <span class="text-[#14b8a6]">Amegh M</span>, <br />
+              an Aspiring Web Developer
+            </h1>
+            <p class="text-gray-300 mb-6 font-inter">
+              I'm a passionate web development student currently learning the
+              MEARN stack. I enjoy building clean, responsive web pages using
+              HTML, CSS, and JavaScript, and I'm expanding my skills into
+              full-stack development with MongoDB, Express, React, and Node.js.
+              I'm eager to create dynamic, real-world applications and
+              constantly exploring new technologies to grow as a developer.
+            </p>
+
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-400 mb-6"
+            >
+              <p>
+                <span class="font-semibold text-white font-inter">From:</span>
+                Kannur, Kerala
+              </p>
+              <p>
+                <span class="font-semibold text-white font-inter">Phone:</span>
+                9562212767
+              </p>
+              <p>
+                <span class="font-semibold text-white font-inter">Age:</span> 21
+                Years
+              </p>
+              <p>
+                <span class="font-semibold text-white font-inter">Email:</span>
+                ameghm04@gmail.com
+              </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4">
+              <div class="flex gap-4 text-xl">
+                <a
+                  href="https://www.instagram.com/_am_eg_h_?igsh=MW5pNXphM2lrMnc3OA=="
+                  class="hover:text-[#14b8a6]"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/amegh-m-a42057362/"
+                  class="hover:text-[#14b8a6]"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="https://github.com/AmeghM" class="hover:text-[#14b8a6]"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" class="hover:text-[#14b8a6]"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section
+        class="group py-16 pb-24 px-[12vw] md:px-[17vw] lg:px-[20vw] font-sans bg-gray-900"
+        id="skills"
+      >
+        <div class="text-center mb-8">
+          <h3
+            class="d-block mb-2 text-[#14b8a6] text-center text-lg font-semibold font-poppins tracking-wider group-hover:animate-pulse"
+          >
+            MY
+          </h3>
+          <h2 class="text-center text-4xl text-white mb-6 font-poppins">
+            Skills
+          </h2>
+        </div>
+        <!-- skills -->
+        <div class="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
+          <div
+            class="bg-gray-900/60 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white shadow-[0_0_10px_#14b8a6] transition-all duration-500 hover:-translate-y-2 hover:scale-101 hover:shadow-[0_0_20px_#06b6d4]/80 hover:border-cyan-400"
+          >
+            <h3
+              class="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center font-inter"
+            >
+              Frontend
+            </h3>
+            <!-- items -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiNFNjUxMDAiIGQ9Ik00MSw1SDdsMywzNGwxNCw0bDE0LTRMNDEsNUw0MSw1eiIvPjxwYXRoIGZpbGw9IiNGRjZEMDAiIGQ9Ik0yNCA4TDI0IDM5LjkgMzUuMiAzNi43IDM3LjcgOHoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMjQsMjV2LTRoOC42bC0wLjcsMTEuNUwyNCwzNS4xdi00LjJsNC4xLTEuNGwwLjMtNC41SDI0eiBNMzIuOSwxN2wwLjMtNEgyNHY0SDMyLjl6Ii8+PHBhdGggZmlsbD0iI0VFRSIgZD0iTTI0LDMwLjl2NC4ybC03LjktMi42TDE1LjcsMjdoNGwwLjIsMi41TDI0LDMwLjl6IE0xOS4xLDE3SDI0di00aC05LjFsMC43LDEySDI0di00aC00LjZMMTkuMSwxN3oiLz48L3N2Zz4="
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span class="text-xs sm:text-sm text-gray-300 font-inter"
+                  >HTML</span
+                >
+              </div>
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiMwMjc3QkQiIGQ9Ik00MSw1SDdsMywzNGwxNCw0bDE0LTRMNDEsNUw0MSw1eiIvPjxwYXRoIGZpbGw9IiMwMzlCRTUiIGQ9Ik0yNCA4TDI0IDM5LjkgMzUuMiAzNi43IDM3LjcgOHoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMzMuMSAxM0wyNCAxMyAyNCAxNyAyOC45IDE3IDI4LjYgMjEgMjQgMjEgMjQgMjUgMjguNCAyNSAyOC4xIDI5LjUgMjQgMzAuOSAyNCAzNS4xIDMxLjkgMzIuNSAzMi42IDIxIDMyLjYgMjF6Ii8+PHBhdGggZmlsbD0iI0VFRSIgZD0iTTI0LDEzdjRoLTguOWwtMC4zLTRIMjR6IE0xOS40LDIxbDAuMiw0SDI0di00SDE5LjR6IE0xOS44LDI3aC00bDAuMyw1LjVsNy45LDIuNnYtNC4ybC00LjEtMS40TDE5LjgsMjd6Ii8+PC9zdmc+"
+                  class="w-6 h-6 sm:w-8 sm:h-8"
+                />
+                <span class="text-xs sm:text-sm text-gray-300 font-inter"
+                  >CSS</span
+                >
+              </div>
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiNmZmQ2MDAiIGQ9Ik02LDQyVjZoMzZ2MzZINnoiLz48cGF0aCBmaWxsPSIjMDAwMDAxIiBkPSJNMjkuNTM4IDMyLjk0N2MuNjkyIDEuMTI0IDEuNDQ0IDIuMjAxIDMuMDM3IDIuMjAxIDEuMzM4IDAgMi4wNC0uNjY1IDIuMDQtMS41ODUgMC0xLjEwMS0uNzI2LTEuNDkyLTIuMTk4LTIuMTMzbC0uODA3LS4zNDRjLTIuMzI5LS45ODgtMy44NzgtMi4yMjYtMy44NzgtNC44NDEgMC0yLjQxIDEuODQ1LTQuMjQ0IDQuNzI4LTQuMjQ0IDIuMDUzIDAgMy41MjguNzExIDQuNTkyIDIuNTczbC0yLjUxNCAxLjYwN2MtLjU1My0uOTg4LTEuMTUxLTEuMzc3LTIuMDc4LTEuMzc3LS45NDYgMC0xLjU0NS41OTctMS41NDUgMS4zNzcgMCAuOTY0LjYgMS4zNTQgMS45ODUgMS45NTFsLjgwNy4zNDRDMzYuNDUyIDI5LjY0NSAzOCAzMC44MzkgMzggMzMuNTIzIDM4IDM2LjQxNSAzNS43MTYgMzggMzIuNjUgMzhjLTIuOTk5IDAtNC43MDItMS41MDUtNS42NS0zLjM2OEwyOS41MzggMzIuOTQ3ek0xNy45NTIgMzMuMDI5Yy41MDYuOTA2IDEuMjc1IDEuNjAzIDIuMzgxIDEuNjAzIDEuMDU4IDAgMS42NjctLjQxOCAxLjY2Ny0yLjA0M1YyMmgzLjMzM3YxMS4xMDFjMCAzLjM2Ny0xLjk1MyA0Ljg5OS00LjgwNSA0Ljg5OS0yLjU3NyAwLTQuNDM3LTEuNzQ2LTUuMTk1LTMuMzY4TDE3Ljk1MiAzMy4wMjl6Ii8+PC9zdmc+"
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span
+                  class="text-xs sm:text-sm text-gray-300 text-center truncate"
+                  >JavaScript</span
+                >
+              </div>
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiIGJhc2VQcm9maWxlPSJiYXNpYyI+PHBhdGggZmlsbD0iIzZjMTlmZiIgZD0iTTYuMzkxLDEwLjY3MWMtMC4wODUtMi40NDgsMS44MjItNC43MDYsNC40MDEtNC43MDZoMjYuNDJjMi41NzgsMCw0LjQ4NiwyLjI1OCw0LjQwMSw0LjcwNgljLTAuMDgyLDIuMzUyLDAuMDI0LDUuMzk4LDAuNzkxLDcuODgyYzAuNzY5LDIuNDkyLDIuMDY2LDQuMDY3LDQuMTksNC4yNjl2Mi4yOTVjLTIuMTI0LDAuMjAyLTMuNDIxLDEuNzc3LTQuMTksNC4yNjkJYy0wLjc2NywyLjQ4NC0wLjg3Myw1LjUzLTAuNzkxLDcuODgyYzAuMDg1LDIuNDQ4LTEuODIyLDQuNzA2LTQuNDAxLDQuNzA2aC0yNi40MmMtMi41NzgsMC00LjQ4Ni0yLjI1OC00LjQtNC43MDYJYzAuMDgyLTIuMzUyLTAuMDI1LTUuMzk4LTAuNzkxLTcuODgyYy0wLjc2OS0yLjQ5Mi0yLjA2OS00LjA2Ny00LjE5NC00LjI2OXYtMi4yOTVjMi4xMjQtMC4yMDIsMy40MjUtMS43NzcsNC4xOTQtNC4yNjkJQzYuMzY3LDE2LjA3LDYuNDczLDEzLjAyMyw2LjM5MSwxMC42NzF6Ii8+PGxpbmVhckdyYWRpZW50IGlkPSJJcy1FR2F4S2NjMENpYzlRTXF5ekdhIiB4MT0iMTcuODQ2IiB4Mj0iMjcuMDc4IiB5MT0iLTE0Ny41NDEiIHkyPSItMTYzLjE1MyIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIC0xMzIpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjFlNWZjIi8+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI0lzLUVHYXhLY2MwQ2ljOVFNcXl6R2EpIiBkPSJNMjUuMDQyLDM0LjAxNmM0LjM2NiwwLDYuOTk3LTIuMTM4LDYuOTk3LTUuNjY0YzAtMi42NjUtMS44NzctNC41OTUtNC42NjUtNC45di0wLjExMQljMi4wNDgtMC4zMzMsMy42NTUtMi4yMzUsMy42NTUtNC4zNTljMC0zLjAyNi0yLjM4OS00Ljk5Ny02LjAzLTQuOTk3aC04LjE5MnYyMC4wMzFIMjUuMDQyeiBNMTkuOTk0LDE2LjUyNWg0LjIzOAljMi4zMDQsMCwzLjYxMiwxLjAyNywzLjYxMiwyLjg4N2MwLDEuOTg1LTEuNTIyLDMuMDk2LTQuMjgxLDMuMDk2aC0zLjU3VjE2LjUyNXogTTE5Ljk5NCwzMS40NzV2LTYuNTk0aDQuMjEJYzMuMDE1LDAsNC41NzksMS4xMSw0LjU3OSwzLjI3NmMwLDIuMTY1LTEuNTIyLDMuMzE4LTQuMzk0LDMuMzE4SDE5Ljk5NHoiLz48L3N2Zz4="
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span
+                  class="text-xs sm:text-sm text-gray-300 text-center truncate"
+                  >Bootstrap</span
+                >
+              </div>
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiMwMGFjYzEiIGQ9Ik0yNCw5LjYwNGMtNi40LDAtMTAuNCwzLjE5OS0xMiw5LjU5N2MyLjQtMy4xOTksNS4yLTQuMzk4LDguNC0zLjU5OSBjMS44MjYsMC40NTYsMy4xMzEsMS43ODEsNC41NzYsMy4yNDdDMjcuMzI4LDIxLjIzNiwzMC4wNTEsMjQsMzYsMjRjNi40LDAsMTAuNC0zLjE5OSwxMi05LjU5OGMtMi40LDMuMTk5LTUuMiw0LjM5OS04LjQsMy42IGMtMS44MjUtMC40NTYtMy4xMy0xLjc4MS00LjU3NS0zLjI0N0MzMi42NzIsMTIuMzY3LDI5Ljk0OCw5LjYwNCwyNCw5LjYwNEwyNCw5LjYwNHogTTEyLDI0Yy02LjQsMC0xMC40LDMuMTk5LTEyLDkuNTk4IGMyLjQtMy4xOTksNS4yLTQuMzk5LDguNC0zLjU5OWMxLjgyNSwwLjQ1NywzLjEzLDEuNzgxLDQuNTc1LDMuMjQ2YzIuMzUzLDIuMzg4LDUuMDc3LDUuMTUyLDExLjAyNSw1LjE1MiBjNi40LDAsMTAuNC0zLjE5OSwxMi05LjU5OGMtMi40LDMuMTk5LTUuMiw0LjM5OS04LjQsMy41OTljLTEuODI2LTAuNDU2LTMuMTMxLTEuNzgxLTQuNTc2LTMuMjQ2QzIwLjY3MiwyNi43NjQsMTcuOTQ5LDI0LDEyLDI0IEwxMiwyNHoiLz48L3N2Zz4="
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span class="text-xs sm:text-sm text-gray-300">Tailwind</span>
+              </div>
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiM4MGRlZWEiIGQ9Ik0yNCwzNEMxMS4xLDM0LDEsMjkuNiwxLDI0YzAtNS42LDEwLjEtMTAsMjMtMTBjMTIuOSwwLDIzLDQuNCwyMywxMEM0NywyOS42LDM2LjksMzQsMjQsMzR6IE0yNCwxNgljLTEyLjYsMC0yMSw0LjEtMjEsOGMwLDMuOSw4LjQsOCwyMSw4czIxLTQuMSwyMS04QzQ1LDIwLjEsMzYuNiwxNiwyNCwxNnoiLz48cGF0aCBmaWxsPSIjODBkZWVhIiBkPSJNMTUuMSw0NC42Yy0xLDAtMS44LTAuMi0yLjYtMC43QzcuNiw0MS4xLDguOSwzMC4yLDE1LjMsMTlsMCwwYzMtNS4yLDYuNy05LjYsMTAuMy0xMi40YzMuOS0zLDcuNC0zLjksOS44LTIuNQljMi41LDEuNCwzLjQsNC45LDIuOCw5LjhjLTAuNiw0LjYtMi42LDEwLTUuNiwxNS4yYy0zLDUuMi02LjcsOS42LTEwLjMsMTIuNEMxOS43LDQzLjUsMTcuMiw0NC42LDE1LjEsNDQuNnogTTMyLjksNS40CWMtMS42LDAtMy43LDAuOS02LDIuN2MtMy40LDIuNy02LjksNi45LTkuOCwxMS45bDAsMGMtNi4zLDEwLjktNi45LDIwLjMtMy42LDIyLjJjMS43LDEsNC41LDAuMSw3LjYtMi4zYzMuNC0yLjcsNi45LTYuOSw5LjgtMTEuOQljMi45LTUsNC44LTEwLjEsNS40LTE0LjRjMC41LTQtMC4xLTYuOC0xLjgtNy44QzM0LDUuNiwzMy41LDUuNCwzMi45LDUuNHoiLz48cGF0aCBmaWxsPSIjODBkZWVhIiBkPSJNMzMsNDQuNmMtNSwwLTEyLjItNi4xLTE3LjYtMTUuNkM4LjksMTcuOCw3LjYsNi45LDEyLjUsNC4xbDAsMEMxNy40LDEuMywyNi4yLDcuOCwzMi43LDE5CWMzLDUuMiw1LDEwLjYsNS42LDE1LjJjMC43LDQuOS0wLjMsOC4zLTIuOCw5LjhDMzQuNyw0NC40LDMzLjksNDQuNiwzMyw0NC42eiBNMTMuNSw1LjhjLTMuMywxLjktMi43LDExLjMsMy42LDIyLjIJYzYuMywxMC45LDE0LjEsMTYuMSwxNy40LDE0LjJjMS43LTEsMi4zLTMuOCwxLjgtNy44Yy0wLjYtNC4zLTIuNS05LjQtNS40LTE0LjRDMjQuNiw5LjEsMTYuOCwzLjksMTMuNSw1LjhMMTMuNSw1Ljh6Ii8+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iNCIgZmlsbD0iIzgwZGVlYSIvPjwvc3ZnPg=="
+                  class="w-4 h-4 sm:w-7 sm:h-7"
+                />
+                <span class="text-xs sm:text-sm text-gray-300">React</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-gray-900/60 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white shadow-[0_0_10px_#14b8a6] transition-all duration-500 hover:-translate-y-2 hover:scale-101 hover:shadow-[0_0_20px_#06b6d4]/80 hover:border-cyan-400"
+          >
+            <h3
+              class="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center font-inter"
+            >
+              Backend
+            </h3>
+            <!-- items -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIGJhc2VQcm9maWxlPSJiYXNpYyI+PHBhdGggZmlsbD0iIzIxYTM2NiIgZD0iTTI0LjAwNyw0NS40MTljLTAuNTc0LDAtMS4xNDMtMC4xNS0xLjY0Ni0wLjQ0bC01LjI0LTMuMTAzYy0wLjc4My0wLjQzOC0wLjQwMS0wLjU5My0wLjE0My0wLjY4MgljMS4wNDQtMC4zNjUsMS4yNTUtMC40NDgsMi4zNjktMS4wODFjMC4xMTctMC4wNjcsMC4yNy0wLjA0MywwLjM5LDAuMDI4bDQuMDI2LDIuMzg5YzAuMTQ1LDAuMDc5LDAuMzUyLDAuMDc5LDAuNDg2LDBsMTUuNjk3LTkuMDYxCWMwLjE0NS0wLjA4MywwLjI0LTAuMjUxLDAuMjQtMC40MjRWMTQuOTMyYzAtMC4xODEtMC4wOTQtMC4zNDItMC4yNDMtMC40MzJMMjQuMjUzLDUuNDQ2Yy0wLjE0NS0wLjA4Ni0wLjMzOC0wLjA4Ni0wLjQ4MywwCUw4LjA4MiwxNC40OTljLTAuMTUyLDAuMDg2LTAuMjQ5LDAuMjU1LTAuMjQ5LDAuNDI4djE4LjExNGMwLDAuMTczLDAuMDk0LDAuMzM4LDAuMjQ0LDAuNDJsNC4yOTksMi40ODMJYzIuMzM0LDEuMTY3LDMuNzYtMC4yMDgsMy43Ni0xLjU5MVYxNi40NzZjMC0wLjI1NSwwLjItMC40NTIsMC40NTYtMC40NTJoMS45ODhjMC4yNDgsMCwwLjQ1MiwwLjE5NiwwLjQ1MiwwLjQ1MnYxNy44ODYJYzAsMy4xMTItMS42OTcsNC45LTQuNjQ4LDQuOWMtMC45MDgsMC0xLjYyMywwLTMuNjE5LTAuOTgybC00LjExOC0yLjM3M0M1LjYyOSwzNS4zMTcsNSwzNC4yMTYsNSwzMy4wNDJWMTQuOTI4CWMwLTEuMTc5LDAuNjI5LTIuMjc5LDEuNjQ2LTIuODYxTDIyLjM2LDMuMDAyYzAuOTk0LTAuNTYyLDIuMzE0LTAuNTYyLDMuMzAxLDBsMTUuNjk0LDkuMDY5QzQyLjM2NywxMi42NTYsNDMsMTMuNzUzLDQzLDE0LjkzMgl2MTguMTE0YzAsMS4xNzUtMC42MzMsMi4yNzEtMS42NDYsMi44NjFMMjUuNjYsNDQuOTcxYy0wLjUwMywwLjI5MS0xLjA3MywwLjQ0LTEuNjU0LDAuNDQiLz48cGF0aCBmaWxsPSIjMjFhMzY2IiBkPSJNMjguODU2LDMyLjkzN2MtNi44NjgsMC04LjMwOC0zLjE1My04LjMwOC01Ljc5N2MwLTAuMjUxLDAuMjAzLTAuNDUyLDAuNDU1LTAuNDUyaDIuMDI4CWMwLjIyNCwwLDAuNDEzLDAuMTYzLDAuNDQ4LDAuMzg0YzAuMzA2LDIuMDY2LDEuMjE4LDMuMTA4LDUuMzcxLDMuMTA4YzMuMzA4LDAsNC43MTUtMC43NDcsNC43MTUtMi41MDIJYzAtMS4wMS0wLjQwMS0xLjc2LTUuNTQtMi4yNjNjLTQuMjk5LTAuNDI0LTYuOTU1LTEuMzcxLTYuOTU1LTQuODA5YzAtMy4xNjcsMi42NzItNS4wNTMsNy4xNDctNS4wNTMJYzUuMDI2LDAsNy41MTcsMS43NDUsNy44MzEsNS40OTNjMC4wMTIsMC4xMy0wLjAzNSwwLjI1NS0wLjEyMiwwLjM1Yy0wLjA4NiwwLjA5LTAuMjA4LDAuMTQ1LTAuMzM0LDAuMTQ1aC0yLjAzOQljLTAuMjEyLDAtMC4zOTctMC4xNDktMC40NC0wLjM1NGMtMC40OTEtMi4xNzMtMS42NzgtMi44NjgtNC45MDQtMi44NjhjLTMuNjExLDAtNC4wMzEsMS4yNTctNC4wMzEsMi4yCWMwLDEuMTQzLDAuNDk1LDEuNDc3LDUuMzY3LDIuMTIyYzQuODI1LDAuNjQsNy4xMTYsMS41NDQsNy4xMTYsNC45MzVjMCwzLjQxOC0yLjg1Myw1LjM3OS03LjgyNyw1LjM3OSIvPjwvc3ZnPg=="
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span class="text-xs sm:text-sm text-gray-300">Node js</span>
+              </div>
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIGJhc2VQcm9maWxlPSJiYXNpYyI+PHBhdGggZmlsbD0iIzIxMjEyMSIgZD0iTTIzLjY5NywzNy41NmgxLjE4YzAuODQsMCwxLjYzMS0wLjM5MiwyLjEzOS0xLjA2MWw3LjQ4NS05Ljg0N2w3LjQ4NSw5Ljg0NwljMC41MDgsMC42NjgsMS4yOTksMS4wNjEsMi4xMzksMS4wNjFoMS4xOEwzNS43NTYsMjVsOS4xMjEtMTJoLTEuMThjLTAuODQsMC0xLjYzMSwwLjM5Mi0yLjEzOSwxLjA2MUwzNC41LDIzLjM0N2wtNy4wNTktOS4yODcJQzI2LjkzMywxMy4zOTIsMjYuMTQyLDEzLDI1LjMwMiwxM2gtMS4xOGw5LjEyMSwxMkwyMy42OTcsMzcuNTZ6Ii8+PHBhdGggZmlsbD0iIzIxMjEyMSIgZD0iTTI0LDI2di0zYzAtNi42NzUtNS45NDUtMTEuOTYxLTEyLjgyOS0xMC44NTJDNS44MTIsMTMuMDExLDIsMTcuODU3LDIsMjMuMjg0TDIsMjR2MnYwLjE0MgljMCw2LjU1Myw0Ljc3NywxMS43ODYsMTAuODY4LDExLjg1OGM1LjA5MiwwLjA2LDkuMzg5LTMuMzQ0LDEwLjcwNy03Ljk5OWgtMS4wMjhjLTAuNjIsMC0xLjE4MiwwLjM1NS0xLjQ1MSwwLjkxMwljLTEuNzM5LDMuNTk1LTUuNzg5LDUuODYyLTEwLjIyOCw0Ljg0MkM2Ljc3NiwzNC44MTUsNCwzMC45ODEsNCwyNi43ODNWMjZIMjR6IE00LDIzLjcxYzAtNC43MDgsMi44MDQtOC41NTcsNi45MjQtOS40NzgJQzE2Ljc5OCwxMi45MiwyMiwxNy4zNTIsMjIsMjN2MUg0VjIzLjcxeiIvPjwvc3ZnPg=="
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span
+                  class="text-xs sm:text-sm text-gray-300 text-center truncate"
+                  >Express Js</span
+                >
+              </div>
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  src="https://icon.icepanel.io/Technology/svg/MongoDB.svg"
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span class="text-xs sm:text-sm text-gray-300">MongoDB</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lg:ml-60 bg-gray-900/60 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white shadow-[0_0_10px_#14b8a6] transition-all duration-500 hover:-translate-y-2 hover:scale-101 hover:shadow-[0_0_20px_#06b6d4]/80 hover:border-cyan-400"
+          >
+            <h3
+              class="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center font-inter"
+            >
+              Tools
+            </h3>
+            <div class="grid grid-cols-2 p-1 sm:grid-cols-3 gap-3 w-full">
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiNGNDUxMUUiIGQ9Ik00Mi4yLDIyLjFMMjUuOSw1LjhDMjUuNCw1LjMsMjQuNyw1LDI0LDVjMCwwLDAsMCwwLDBjLTAuNywwLTEuNCwwLjMtMS45LDAuOGwtMy41LDMuNWw0LjEsNC4xYzAuNC0wLjIsMC44LTAuMywxLjMtMC4zYzEuNywwLDMsMS4zLDMsM2MwLDAuNS0wLjEsMC45LTAuMywxLjNsNCw0YzAuNC0wLjIsMC44LTAuMywxLjMtMC4zYzEuNywwLDMsMS4zLDMsM3MtMS4zLDMtMywzYy0xLjcsMC0zLTEuMy0zLTNjMC0wLjUsMC4xLTAuOSwwLjMtMS4zbC00LTRjLTAuMSwwLTAuMiwwLjEtMC4zLDAuMXYxMC40YzEuMiwwLjQsMiwxLjUsMiwyLjhjMCwxLjctMS4zLDMtMywzcy0zLTEuMy0zLTNjMC0xLjMsMC44LTIuNCwyLTIuOFYxOC44Yy0xLjItMC40LTItMS41LTItMi44YzAtMC41LDAuMS0wLjksMC4zLTEuM2wtNC4xLTQuMUw1LjgsMjIuMUM1LjMsMjIuNiw1LDIzLjMsNSwyNGMwLDAuNywwLjMsMS40LDAuOCwxLjlsMTYuMywxNi4zYzAsMCwwLDAsMCwwYzAuNSwwLjUsMS4yLDAuOCwxLjksMC44czEuNC0wLjMsMS45LTAuOGwxNi4zLTE2LjNjMC41LTAuNSwwLjgtMS4yLDAuOC0xLjlDNDMsMjMuMyw0Mi43LDIyLjYsNDIuMiwyMi4xeiIvPjwvc3ZnPg=="
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span class="text-xs sm:text-sm text-gray-300">Git</span>
+              </div>
+              <div
+                class="flex items-center justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgMzAgMzAiIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiPiAgICA8cGF0aCBkPSJNMTUsM0M4LjM3MywzLDMsOC4zNzMsMywxNWMwLDUuNjIzLDMuODcyLDEwLjMyOCw5LjA5MiwxMS42M0MxMi4wMzYsMjYuNDY4LDEyLDI2LjI4LDEyLDI2LjA0N3YtMi4wNTEgYy0wLjQ4NywwLTEuMzAzLDAtMS41MDgsMGMtMC44MjEsMC0xLjU1MS0wLjM1My0xLjkwNS0xLjAwOWMtMC4zOTMtMC43MjktMC40NjEtMS44NDQtMS40MzUtMi41MjYgYy0wLjI4OS0wLjIyNy0wLjA2OS0wLjQ4NiwwLjI2NC0wLjQ1MWMwLjYxNSwwLjE3NCwxLjEyNSwwLjU5NiwxLjYwNSwxLjIyMmMwLjQ3OCwwLjYyNywwLjcwMywwLjc2OSwxLjU5NiwwLjc2OSBjMC40MzMsMCwxLjA4MS0wLjAyNSwxLjY5MS0wLjEyMWMwLjMyOC0wLjgzMywwLjg5NS0xLjYsMS41ODgtMS45NjJjLTMuOTk2LTAuNDExLTUuOTAzLTIuMzk5LTUuOTAzLTUuMDk4IGMwLTEuMTYyLDAuNDk1LTIuMjg2LDEuMzM2LTMuMjMzQzkuMDUzLDEwLjY0Nyw4LjcwNiw4LjczLDkuNDM1LDhjMS43OTgsMCwyLjg4NSwxLjE2NiwzLjE0NiwxLjQ4MUMxMy40NzcsOS4xNzQsMTQuNDYxLDksMTUuNDk1LDkgYzEuMDM2LDAsMi4wMjQsMC4xNzQsMi45MjIsMC40ODNDMTguNjc1LDkuMTcsMTkuNzYzLDgsMjEuNTY1LDhjMC43MzIsMC43MzEsMC4zODEsMi42NTYsMC4xMDIsMy41OTQgYzAuODM2LDAuOTQ1LDEuMzI4LDIuMDY2LDEuMzI4LDMuMjI2YzAsMi42OTctMS45MDQsNC42ODQtNS44OTQsNS4wOTdDMTguMTk5LDIwLjQ5LDE5LDIyLjEsMTksMjMuMzEzdjIuNzM0IGMwLDAuMTA0LTAuMDIzLDAuMTc5LTAuMDM1LDAuMjY4QzIzLjY0MSwyNC42NzYsMjcsMjAuMjM2LDI3LDE1QzI3LDguMzczLDIxLjYyNywzLDE1LDN6Ii8+PC9zdmc+"
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span class="text-xs sm:text-sm text-gray-300">GitHub</span>
+              </div>
+              <div
+                class="flex items-center justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiMyOWI2ZjYiIGQ9Ik00NCwxMS4xMXYyNS43OGMwLDEuMjctMC43OSwyLjQtMS45OCwyLjgybC04LjgyLDQuMTRMMzQsMzNWMTVMMzMuMiw0LjE1bDguODIsNC4xNCBDNDMuMjEsOC43MSw0NCw5Ljg0LDQ0LDExLjExeiIvPjxwYXRoIGZpbGw9IiMwMjc3YmQiIGQ9Ik05LDMzLjg5NkwzNCwxNVY1LjM1M2MwLTEuMTk4LTEuNDgyLTEuNzU4LTIuMjc1LTAuODZMNC42NTgsMjkuMjM5IGMtMC45LDAuODMtMC44NDksMi4yNjcsMC4xMDcsMy4wMzJjMCwwLDEuMzI0LDEuMjMyLDEuODAzLDEuNTc0QzcuMzA0LDM0LjM3LDguMjcxLDM0LjQzLDksMzMuODk2eiIvPjxwYXRoIGZpbGw9IiMwMjg4ZDEiIGQ9Ik05LDE0LjEwNEwzNCwzM3Y5LjY0N2MwLDEuMTk4LTEuNDgyLDEuNzU4LTIuMjc1LDAuODZMNC42NTgsMTguNzYxIGMtMC45LTAuODMtMC44NDktMi4yNjcsMC4xMDctMy4wMzJjMCwwLDEuMzI0LTEuMjMyLDEuODAzLTEuNTc0QzcuMzA0LDEzLjYzLDguMjcxLDEzLjU3LDksMTQuMTA0eiIvPjwvc3ZnPg=="
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span class="text-xs sm:text-sm text-gray-300">VS Code</span>
+              </div>
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="https://icon.icepanel.io/Technology/svg/Postman.svg"
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span
+                  class="text-xs sm:text-sm text-gray-300 text-center truncate"
+                  >Postman</span
+                >
+              </div>
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiNlNjRhMTkiIGQ9Ik0yNiwxN2gtOGMtMy44NjYsMC03LTMuMTM0LTctN3YwYzAtMy44NjYsMy4xMzQtNyw3LTdoOFYxN3oiLz48cGF0aCBmaWxsPSIjN2M0ZGZmIiBkPSJNMjUsMzFoLTdjLTMuODY2LDAtNy0zLjEzNC03LTd2MGMwLTMuODY2LDMuMTM0LTcsNy03aDdWMzF6Ii8+PHBhdGggZmlsbD0iIzY2YmI2YSIgZD0iTTE4LDQ1TDE4LDQ1Yy0zLjg2NiwwLTctMy4xMzQtNy03djBjMC0zLjg2NiwzLjEzNC03LDctN2g3djdDMjUsNDEuODY2LDIxLjg2Niw0NSwxOCw0NXoiLz48cGF0aCBmaWxsPSIjZmY3MDQzIiBkPSJNMzIsMTdoLTdWM2g3YzMuODY2LDAsNywzLjEzNCw3LDd2MEMzOSwxMy44NjYsMzUuODY2LDE3LDMyLDE3eiIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMjQiIHI9IjciIGZpbGw9IiMyOWI2ZjYiLz48L3N2Zz4="
+                  class="w-6 h-6 sm:w-7 sm:h-7"
+                />
+                <span class="text-xs sm:text-sm text-gray-300">Figma</span>
+              </div>
+              <div
+                class="flex items-center p-1 justify-center space-x-2 bg-transparent border-2 border-[#14b8a6] rounded-3xl transition-transform hover:scale-105 hover:shadow-[0_0_8px_#14b8a6]"
+              >
+                <img
+                  alt="svgImg"
+                  src="https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png"
+                  class="w-4 h-4 sm:w-7 sm:h-7"
+                />
+                <span class="text-xs sm:text-sm text-gray-300">Vercel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- project section -->
+      <section class="group1 p-16 bg-gray-800" id="works">
+        <h3
+          class="d-block mb-2 text-[#14b8a6] text-center text-lg font-semibold tracking-wider font-poppins group1-hover:animate-pulse"
+        >
+          MY PROJECTS
+        </h3>
+        <h2 class="text-center text-4xl text-white mb-6 font-poppins">
+          Recent Works
+        </h2>
+        <div class="container mx-auto p-6">
+          <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <!-- card -->
+            <div
+              class="group bg-gray-900/70 rounded-2xl overflow-hidden shadow-lg transition transform duration-500 hover:translate-y-3 hover:scale-101 hover:shadow-[0_0_25px_#06b6d4]/70"
+            >
+              <div class="w-full h-40">
+                <img
+                  src="media/Screenshot 2025-08-17 114415.png"
+                  alt="Project 1"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div class="p-4">
+                <h2
+                  class="text-white text-lg font-bold group-hover:animate-bounce [animation-duration:2s]"
+                >
+                  Event Management Website
+                </h2>
+                <p
+                  class="text-gray-400 text-sm mt-3 leading-relaxed font-inter group-hover:animate-pulse"
+                >
+                  An event management platform designed to simplify the planning
+                  process.From weddings to various gatherings..
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4 absolute">
+                  <span
+                    class="px-3 py-1 text-xs rounded-full bg-[#14b8a6]/50 text-[#14b8a6] border border-[#14b8a6]/10 font-inter hover:bg-[#0d9488]"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-3 py-1 text-xs rounded-full bg-[#14b8a6]/50 text-[#14b8a6] border border-[#14b8a6]/10 font-inter hover:bg-[#0d9488]"
+                    >CSS</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="relative left-90 top-3 text-2xl text-[#14b8a6] hover:text-[#0d9488] group-hover:animate-pulse"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+                <div class="mb-2"></div>
+              </div>
+            </div>
+            <div
+              class="group bg-gray-900/70 rounded-2xl overflow-hidden shadow-lg transition transform duration-500 hover:translate-y-3 hover:scale-101 hover:shadow-[0_0_25px_#06b6d4]/70"
+            >
+              <div class="w-full h-40">
+                <img
+                  src="media/Screenshot 2025-08-17 114456.png"
+                  alt="Project 1"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div class="p-4">
+                <h2
+                  class="text-white text-lg font-bold group-hover:animate-bounce [animation-duration:2s]"
+                >
+                  Restaurant Website
+                </h2>
+                <p
+                  class="text-gray-400 text-sm mt-3 leading-relaxed font-inter group-hover:animate-pulse"
+                >
+                  A modern restaurant website offering a smooth way to explore
+                  menus,book tables, and enjoy dining experience.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4 absolute">
+                  <span
+                    class="px-3 py-1 text-xs rounded-full bg-[#14b8a6]/50 text-[#14b8a6] border border-[#14b8a6]/10 font-inter hover:bg-[#0d9488]"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-3 py-1 text-xs rounded-full bg-[#14b8a6]/50 text-[#14b8a6] border border-[#14b8a6]/10 font-inter hover:bg-[#0d9488]"
+                    >CSS</span
+                  >
+                  <span
+                    class="px-3 py-1 text-xs rounded-full bg-[#14b8a6]/50 text-[#14b8a6] border border-[#14b8a6]/10 font-inter hover:bg-[#0d9488]"
+                    >BS5</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="relative left-90 top-3 text-2xl text-[#14b8a6] hover:text-[#0d9488]"
+                  ><i
+                    class="fa-solid fa-arrow-up-right-from-square animate-pulse"
+                  ></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="group bg-gray-900/70 rounded-2xl overflow-hidden shadow-lg transition transform duration-500 hover:translate-y-3 hover:scale-101 hover:shadow-[0_0_25px_#06b6d4]/70"
+            >
+              <div class="w-full h-40">
+                <img
+                  src="media/Screenshot 2025-08-17 114537.png"
+                  alt="Project 1"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div class="p-4">
+                <h2
+                  class="text-white text-lg font-bold group-hover:animate-bounce [animation-duration:2s]"
+                >
+                  Amazon Clone
+                </h2>
+                <p
+                  class="text-gray-400 text-sm mt-3 leading-relaxed font-inter group-hover:animate-pulse"
+                >
+                  A pixel-perfect clone of Amazon,replicating its design, layout
+                  etc..
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4 absolute">
+                  <span
+                    class="px-3 py-1 text-xs rounded-full bg-[#14b8a6]/50 text-[#14b8a6] border border-[#14b8a6]/10 font-inter hover:bg-[#0d9488]"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-3 py-1 text-xs rounded-full bg-[#14b8a6]/50 text-[#14b8a6] border border-[#14b8a6]/10 font-inter hover:bg-[#0d9488]"
+                    >CSS</span
+                  >
+                  <span
+                    class="px-3 py-1 text-xs rounded-full bg-[#14b8a6]/50 text-[#14b8a6] border border-[#14b8a6]/10 font-inter hover:bg-[#0d9488]"
+                    >BS5</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="relative left-90 top-3 text-2xl text-[#14b8a6] hover:text-[#0d9488] group-hover:animate-pulse"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- education -->
+      <section></section>
+
+      <!-- Contact section -->
+      <!-- <section class="contact p-24 bg-gray-900" id="contact">
+      <h3 class="d-block mb-2 text-[#14b8a6] text-center text-lg font-semibold tracking-wider">
+        TALK TO ME
+      </h3>
+      <h2 class="text-center text-4xl text-white mb-8">Contact Me</h2>
+      <div class="px-20 flex items-start justify-evenly grid-2-cols gap-8 py-3">
+        <div class="contact-details">
+          <div class="contact-item flex items-start gap-3 mb-10">
+            <i class="fa-solid fa-phone text-[#14b8a6] text-xl"></i>
+            <div>
+              <h3 class="text-white">Call:</h3>
+              <span class="text-gray-300">+91 9562212767</span>
+            </div>
+          </div>
+          <div class="contact-item flex items-start gap-3 mb-10">
+            <i class="fa-solid fa-envelope text-[#14b8a6] text-xl"></i>
+            <div>
+              <h3 class="text-white">Email:</h3>
+              <span class="text-gray-300">ameghm04@gmail.com</span>
+            </div>
+          </div>
+          <div class="contact-item flex items-start gap-3 mb-20">
+            <i class="fa-solid fa-location-dot text-[#14b8a6] text-xl"></i>
+            <div>
+              <h3 class="text-white">Address:</h3>
+              <span class="text-gray-300">Kannur,Kerala</span>
+            </div>
+          </div>
+        </div>
+        <form action="" class="w-[600px]">
+          <div class="flex items-center gap-3">
+            <div class="flex-1">
+              <input type="text" placeholder="Name"
+                class="bg-white/5 text-white/50 border border-gray-500 p-2 w-full mb-2 rounded-lg" />
+            </div>
+            <div class="flex-1">
+              <input type="text" placeholder="Email"
+                class="bg-white/5 text-white/50 border border-gray-500 p-2 w-full mb-2 rounded-lg" />
+            </div>
+          </div>
+          <div>
+            <input type="text" placeholder="Subject"
+              class="bg-white/5 text-white/50 border border-gray-500 p-2 w-full mb-2 rounded-lg" />
+          </div>
+          <div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message"
+              class="bg-white/5 text-white/50 border border-gray-500 p-2 w-full mb-2 rounded-lg"></textarea>
+          </div>
+          <button type="submit"
+            class="px-4 w-full py-2 bg-[#14b8a6] text-white font-semibold rounded-xl shadow hover:bg-[#0d9488] transition">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section> -->
+
+      <section
+        class="group bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 px-6"
+        id="contact"
+      >
+        <div class="container mx-auto max-w-6xl">
+          <div class="text-center mb-12">
+            <h3
+              class="d-block mb-2 text-[#14b8a6] text-center text-lg font-semibold tracking-wider font-poppins group-hover:animate-pulse"
+            >
+              GET IN TOUCH
+            </h3>
+            <h2 class="text-center text-4xl text-white mb-6 font-poppins">
+              Contact Me
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Contact Form -->
+            <form class="space-y-4 bg-gray-900/40 p-6 rounded-2xl shadow-lg">
+              <div>
+                <label class="block text-sm mb-1">Your Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-1 focus:ring-[#14b8a6] outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-sm mb-1">Email Address</label>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-1 focus:ring-[#14b8a6] outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-sm mb-1">Subject</label>
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-1 focus:ring-[#14b8a6] outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-sm mb-1">Message</label>
+                <textarea
+                  rows="4"
+                  placeholder="Message"
+                  class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-1 focus:ring-[#14b8a6] outline-none"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full py-3 rounded-lg bg-[#14b8a6] hover:bg-[#0d9488] text-white font-semibold transition cursor-pointer"
+              >
+                Send Message
+              </button>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="bg-gray-900/40 p-6 rounded-2xl shadow-lg">
+              <h3 class="text-xl font-semibold mb-4 text-[#14b8a6]">
+                Let's Connect
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-center gap-3">
+                  <span
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-500/20 text-blue-400"
+                    >📧</span
+                  >
+                  <span>ameghm04@gmail.com</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-green-500/20 text-green-400"
+                    >📞</span
+                  >
+                  <span>+91 9562 2127 67</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-purple-500/20 text-purple-400"
+                    >📍</span
+                  >
+                  <span>Kannur, Kerala</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer
+        class="text-white py-8 px-[12w] md:px-[7vw] lg:[20vw] bg-gray-800"
+      >
+        <div class="container mx-auto text-center">
+          <h2 class="text-xl font-semibold text-[#14b8a6] font-poppins">
+            Amegh M
+          </h2>
+          <div
+            class="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4 text-gray-300"
+          >
+            <a
+              href="#home"
+              class="font-semibold transition hover:text-[#14b8a6]"
+              >Home</a
+            >
+            <a
+              href="#home"
+              class="font-semibold transition hover:text-[#14b8a6]"
+              >About</a
+            >
+            <a
+              href="#home"
+              class="font-semibold transition hover:text-[#14b8a6]"
+              >Skills</a
+            >
+            <a
+              href="#home"
+              class="font-semibold transition hover:text-[#14b8a6]"
+              >Works</a
+            >
+          </div>
+          <div
+            class="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4 text-gray-300 mb-5"
+          >
+            <div class="flex gap-4 text-xl">
+              <a
+                href="https://www.instagram.com/_am_eg_h_?igsh=MW5pNXphM2lrMnc3OA=="
+                class="hover:text-[#14b8a6]"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/amegh-m-a42057362/"
+                class="hover:text-[#14b8a6]"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/AmeghM" class="hover:text-[#14b8a6]"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="#" class="hover:text-[#14b8a6]"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <p class="text-white font-inter">
+            &copy; 2025 Amegh. All Rights Reserved
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
