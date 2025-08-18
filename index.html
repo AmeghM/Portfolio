@@ -70,7 +70,68 @@
 
   <body>
     <div class="bg-gray-900 h-screen overflow-x-clip antialised">
-      <header>
+      <header class="fixed top-0 left-0 w-full z-50">
+  <!-- 1) Checkbox state (must be a sibling of the menu) -->
+  <input id="nav-toggle" type="checkbox" class="peer sr-only" />
+
+  <!-- 2) Nav bar -->
+  <nav class="px-5 lg:px-8 py-4 flex items-center justify-between bg-transparent">
+    <!-- Logo -->
+    <a href="#home" class="ml-4 md:ml-14 text-white font-poppins text-xl font-semibold tracking-wide">
+      logo
+    </a>
+
+    <!-- Desktop menu -->
+    <ul
+      class="hidden md:flex items-center gap-3 lg:gap-4 rounded-full px-11 py-3 border-2 text-sm text-gray-300 border-white/10 bg-white/5 backdrop-blur font-poppins"
+    >
+      <li><a href="#home" class="block rounded-full px-4 py-1.5 font-semibold hover:bg-white/10 hover:text-[#14b8a6]">Home</a></li>
+      <li><a href="#about" class="block rounded-full px-4 py-1.5 font-semibold hover:bg-white/10 hover:text-[#14b8a6]">About Me</a></li>
+      <li><a href="#skills" class="block rounded-full px-4 py-1.5 font-semibold hover:bg-white/10 hover:text-[#14b8a6]">Skills</a></li>
+      <li><a href="#works" class="block rounded-full px-4 py-1.5 font-semibold hover:bg-white/10 hover:text-[#14b8a6]">My Work</a></li>
+      <li><a href="#contact" class="block rounded-full px-4 py-1.5 font-semibold hover:bg-white/10 hover:text-[#14b8a6]">Contact Me</a></li>
+    </ul>
+
+    <!-- Desktop -->
+    <a
+      href="#contact"
+      class="hidden md:flex items-center gap-3 px-8 py-2.5 border-2 border-[#14b8a6] rounded-full ml-6 text-white hover:bg-[#14b8a6] hover:text-gray-900 transition"
+    >
+      Connect <img src="media/arrow-icon.png" alt="arrow-icon" class="w-3" />
+    </a>
+
+    <!-- 3) Hamburger (label toggles the checkbox) -->
+    <label for="nav-toggle" class="md:hidden ml-auto flex flex-col gap-1.5 cursor-pointer">
+      <span class="w-6 h-0.5 bg-white rounded transition peer-checked:translate-y-[7px] peer-checked:rotate-45"></span>
+      <span class="w-6 h-0.5 bg-white rounded transition peer-checked:opacity-0"></span>
+      <span class="w-6 h-0.5 bg-white rounded transition peer-checked:-translate-y-[7px] peer-checked:-rotate-45"></span>
+    </label>
+  </nav>
+
+
+  <label
+    for="nav-toggle"
+    class="md:hidden fixed inset-0 bg-black/40 hidden peer-checked:block z-40"
+    aria-hidden="true"
+  ></label>
+
+ 
+  <div
+    class="md:hidden fixed left-4 right-4 top-[72px] hidden peer-checked:block z-50
+           rounded-2xl border border-white/10 bg-gray-900/95 backdrop-blur
+           overflow-hidden"
+  >
+    <nav class="px-6 py-6 flex flex-col items-center gap-5 text-white font-poppins">
+      <a href="#home" class="hover:text-[#14b8a6]">Home</a>
+      <a href="#about" class="hover:text-[#14b8a6]">About Me</a>
+      <a href="#skills" class="hover:text-[#14b8a6]">Skills</a>
+      <a href="#works" class="hover:text-[#14b8a6]">My Work</a>
+      <a href="#contact" class="hover:text-[#14b8a6]">Contact Me</a>
+    </nav>
+  </div>
+</header>
+
+      <!--<header>
         <nav
           class="w-full fixed px-5 lg:px-8 py-4 flex items-center justify-between z-50"
         >
@@ -140,7 +201,7 @@
             ></span>
           </button>
         </nav>
-      </header>
+      </header>-->
       <!-- hero section -->
       <!-- <section class="overflow-hidden" id="home">
         <div class="lg:max-w-7xl">
@@ -944,3 +1005,4 @@
     </div>
   </body>
 </html>
+
